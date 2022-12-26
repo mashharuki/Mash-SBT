@@ -1,2 +1,15 @@
 # Mash-SBT
-マッシュのSBTを作成するリポジトリです。
+
+マッシュの SBT を作成するリポジトリです。
+
+## コマンド系
+
+Try running some of the following tasks:
+
+```shell
+npx hardhat help
+npx hardhat test
+REPORT_GAS=true npx hardhat test
+npx hardhat node
+npx hardhat run scripts/deploy.js
+```

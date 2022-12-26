@@ -1,0 +1,15 @@
+{ 
+    "name": "Shape Yellow CooperatorNFT",    
+    "image": "https://nftstorage.link/ipfs/bafybeigv2eh2jktcieoyt4aylcnhpdtz43b2s3dubdnzd3pcnbicy2q6eq/6.png",
+    "description": "First cooperator NFT for Shape",    
+    "attributes": [
+        {
+            "trait_type": "roll",
+            "value": "first cooperator"
+        },
+        {
+            "trait_type": "color",
+            "value": "yellow"
+        }
+    ]
+}
