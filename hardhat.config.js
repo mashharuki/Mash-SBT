@@ -25,7 +25,7 @@ module.exports = {
     */
     shibuya: {
       url: "https://shibuya.public.blastapi.io",
-      chainId:81,
+      chainId: 81,
       accounts: [`0x${REACT_APP_PRIVATE_KEY}`],
     },
     astar: {

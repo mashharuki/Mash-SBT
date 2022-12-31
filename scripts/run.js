@@ -12,7 +12,11 @@ async function main() {
   console.log(`MashSBT deployed to ${mashSBT.address}`);
 
   // SBT Mint
-  
+  for (var i=0;i < 29;i++) {
+    await mashSBT.mint("0x51908F598A5e0d8F1A3bAbFa6DF76F9704daD072" ,1);
+  }
+
+  console.log(`minted NFT!!`);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

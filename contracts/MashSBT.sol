@@ -25,11 +25,12 @@ contract MashSBT is ERC721, ERC721URIStorage, Ownable {
     /**
      * constructor
      */
-    constructor() payable ERC721("MashSBT", "MBT") {
+    constructor(string memory baseTokenUri_) payable ERC721("MashSBT", "MBT") {
         mintPrice = 0.0 ether;
         totalSupply = 0;
-        maxSupply = 8;
-        maxPerWallet = 100;
+        maxSupply = 29;
+        maxPerWallet = 29;
+        baseTokenUri = baseTokenUri_;
         withdrawWallet = payable(0xf635736bab5f3b2d6c01304192Da098a760770E2);
     }
 
@@ -68,19 +69,19 @@ contract MashSBT is ERC721, ERC721URIStorage, Ownable {
         require(success, "withdraw failed");
     }
 
-    function mint(uint256 quantity_) public payable {
-        require(isPublicMintEnabled, "minting not enabled");
+    function mint(address to, uint256 quantity_) public payable {
+        // require(isPublicMintEnabled, "minting not enabled");
         require(msg.value == quantity_ * mintPrice, "wrong not enabled");
         require(totalSupply + quantity_ <= maxSupply, "sold out");
         require(
-            walletMints[msg.sender] + quantity_ <= maxPerWallet,
+            walletMints[to] + quantity_ <= maxPerWallet,
             "exceed max wallet"
         );
-        walletMints[msg.sender]++;
+        walletMints[to]++;
         uint256 newTokenId = totalSupply + 1;
         totalSupply++;
-        _safeMint(msg.sender, newTokenId);
-        _balances[msg.sender]++;
+        _safeMint(to, newTokenId);
+        _balances[to]++;
     }
 
     function _beforeTokenTransfer(
