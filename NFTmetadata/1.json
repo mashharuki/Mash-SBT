@@ -1,15 +1,5 @@
 {
     "name": "Shape Blue CooperatorNFT",
     "image": "ipfs://bafybeiga5a4nvieopckcdau7eusbs3wba3hoekricw2cwqy55gez5426uy/1.png",
-    "description": "First cooperator NFT for Shape",
-    "attributes": [
-        {
-            "trait_type": "roll",
-            "value": "First cooperator"
-        },
-        {
-            "trait_type": "color",
-            "value": "Blue"
-        }
-    ]
+    "description": "First cooperator NFT for Shape"
 }
