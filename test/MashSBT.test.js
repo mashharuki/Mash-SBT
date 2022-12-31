@@ -1,6 +1,9 @@
 const { expect } = require('chai');
 const { ethers } = require('hardhat');
 
+/**
+ * Mash Test code
+ */
 describe('MashSBT test', () => {
   it('Should return the balanceOf', async () => {
     const MashSBT = await ethers.getContractFactory('MashSBT');
